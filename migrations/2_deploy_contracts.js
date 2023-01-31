@@ -12,6 +12,6 @@ module.exports = async function(deployer) {
   let token =  await Token.deployed()
 
   // Transfer all tokens to EthSwap (1 million)
-  token.transfer(ethSwap.address, '1000000000000000000000000')
+  await token.transfer(ethSwap.address, '1000000000000000000000000')
 
 };
